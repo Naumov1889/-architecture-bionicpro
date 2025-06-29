@@ -32,7 +32,7 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ./api
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
@@ -44,7 +44,7 @@ services:
     depends_on:
       - keycloak
     volumes:
-      - ./backend:/app # For development hot reload
+      - ./api:/app # For development hot reload
 
   frontend:
     build:

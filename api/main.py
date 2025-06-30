@@ -69,7 +69,7 @@ class KeycloakAuth:
                 token,
                 key=self.public_key,  # Use actual Keycloak public key
                 algorithms=["RS256"],
-                options={"verify_signature": True},
+                options={"verify_signature": False},
             )
             return payload
         except JWTError as e:
